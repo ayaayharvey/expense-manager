@@ -1,51 +1,19 @@
 <template>
   <div class="p-5">
+    <Profile />
     <Navigations :navigations="navigations" />
   </div>
 </template>
 
 <script>
-import Navigations from './Navigations.vue';
+import Profile from './profile/Profile.vue';
+import Navigations from './navigations/Navigations.vue';
 
 export default {
   name: 'Sidebar',
   components: {
+    Profile,
     Navigations,
-  },
-  data() {
-    return {
-      navigations: [],
-    };
-  },
-  created() {
-    this.navigations = [
-      {
-        title: 'Dashboard',
-        child: [],
-      },
-      {
-        title: 'User Management',
-        child: [
-          {
-            title: 'Roles',
-          },
-          {
-            title: 'Users',
-          },
-        ],
-      },
-      {
-        title: 'Expense Management',
-        child: [
-          {
-            title: 'Expense Categories',
-          },
-          {
-            title: 'Expenses',
-          },
-        ],
-      },
-    ];
   },
 };
 </script>
