@@ -1,6 +1,8 @@
 <template>
-  <div class="bg-white rounded-lg drop-shadow-md">
-    <h3 class="px-5 py-3 text-xl font-semibold text-gray-800">{{ label }}</h3>
+  <div class="bg-white rounded-lg drop-shadow-md text-sm capitalize">
+    <h3 class="px-5 py-3 font-semibold text-gray-800 uppercase">
+      {{ label }}
+    </h3>
     <table class="rounded w-full">
       <slot />
     </table>

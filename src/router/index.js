@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Dashboard from '../views/Dashboard.vue';
-import Roles from '../views/user-management/Roles.vue';
-import Users from '../views/user-management/Users.vue';
+import Roles from '../views/user-management/roles/Roles.vue';
+import Users from '../views/user-management/users/Users.vue';
 import ExpenseCategories from '../views/expense-management/ExpenseCategories.vue';
 import Expenses from '../views/expense-management/Expenses.vue';
 
