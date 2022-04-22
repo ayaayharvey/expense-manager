@@ -1,5 +1,5 @@
 <template>
-  <div class="py-1 w-full">
+  <div class="py-2 w-full">
     <label class="text-sm">{{ label }}</label>
     <div class="mt-1 relative">
       <button
@@ -36,10 +36,10 @@ export default {
   },
   data() {
     return {
-      selectionOpen: true,
+      selectionOpen: false,
       selected: {
-        id: this.selections[0].id,
-        label: this.selections[0].label,
+        id: this.selections[0] && this.selections[0].id,
+        label: this.selections[0] && this.selections[0].label,
       },
     };
   },
@@ -51,6 +51,14 @@ export default {
       this.selected = {
         id: data.id,
         label: data.label,
+      };
+      this.openSelection();
+    },
+    resetForm() {
+      this.selectionOpen = false;
+      this.selected = {
+        id: this.selections[0] && this.selections[0].id,
+        label: this.selections[0] && this.selections[0].label,
       };
     },
   },

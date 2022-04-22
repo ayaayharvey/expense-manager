@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-lg drop-shadow-md text-sm capitalize">
+  <div class="bg-white rounded-lg drop-shadow-md text-sm">
     <h3 class="px-5 py-3 font-semibold text-gray-800 uppercase">
       {{ label }}
     </h3>

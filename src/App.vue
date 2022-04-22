@@ -1,5 +1,5 @@
 <template class="">
-  <main class="flex">
+  <main class="flex text-sm">
     <Sidebar />
     <Main />
   </main>

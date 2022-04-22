@@ -1,5 +1,5 @@
 <template>
-  <div class="py-1 w-full">
+  <div class="py-2 w-full">
     <label class="text-sm">{{ label }}</label>
     <div class="mt-1">
       <input

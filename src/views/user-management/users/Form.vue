@@ -1,8 +1,8 @@
 <template>
-  <Modal @close-modal="$emit('close-form')" label="Add Modal">
+  <Modal @close-modal="onClose()" label="Add Modal">
     <Textbox label="Name" placeholder="Enter your name" />
     <Textbox label="Email Address" placeholder="Enter your email address" />
-    <Dropdown label="Role" :selections="roles" />
+    <Dropdown label="Role" :selections="roles" ref="role" />
   </Modal>
 </template>
 
@@ -21,6 +21,12 @@ export default {
     return {
       roles: [],
     };
+  },
+  methods: {
+    onClose() {
+      this.$emit('close-form');
+      this.$refs.role.resetForm();
+    },
   },
   created() {
     this.roles = [
